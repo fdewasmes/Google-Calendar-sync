@@ -39,3 +39,18 @@ start.sh
 ```
 */10 * * * * /home/pi/smile-calendar-export/start.sh > /tmp/cronlog.txt 2>&1
 ````
+
+to display the calendar, install https://github.com/ulrichwisser/MMM-HTMLBox on your MagicMirror install and add this configuration to your `config.js` file:
+```json
+{
+   module: "MMM-HTMLBox",
+   position:"bottom_right",
+   config: {
+     width: "100%",
+     height: "250px",
+     refresh_interval_sec: 300,
+     content: "",
+     file: "smile-cal.html",
+     }
+},
+```
